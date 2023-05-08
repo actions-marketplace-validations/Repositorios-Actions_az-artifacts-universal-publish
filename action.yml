@@ -36,5 +36,6 @@ runs:
   steps:
     - run: |
         cd ${{ inputs.work_dir }}
+        pwd && ls -l
         az artifacts universal publish --organization ${{ inputs.organization }} --project='${{ inputs.project }}' --scope project --feed ${{ inputs.feed }} --name ${{ inputs.name }} --version ${{ inputs.version }} --description '${{ inputs.description }}' --path ${{ inputs.path }}
       shell: bash
