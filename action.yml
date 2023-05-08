@@ -1,4 +1,4 @@
-name: "Copy File To"
+name: "AZ Artifacts Universal Publish"
 description: | 
   "Publica tus artefactos universales en los repositorios de artefacto de Azure DevOps."
 # https://actions-cool.github.io/github-action-branding/
