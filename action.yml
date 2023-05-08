@@ -1,0 +1,40 @@
+name: "Copy File To"
+description: | 
+  "Publica tus artefactos universales en los repositorios de artefacto de Azure DevOps."
+# https://actions-cool.github.io/github-action-branding/
+branding:
+  icon: 'upload-cloud'
+  color: 'white'
+inputs:
+  work_dir:
+    description: 'Directorio del repositorio'
+    required: true
+  organization:
+    description: 'Organización donde pertenece el artefacto'
+    required: true
+  project:
+    description: 'Proyecto al que pertenece el repositorio de artefactos'
+    required: true
+  feed:
+    description: 'Nombre del feed donde se subira el artefacto'
+    required: true
+  name:
+    description: 'Nombre del artefacto'
+    required: true
+  version:
+    description: 'Version que llevará el artefacto ejemplo 1.0.0'
+    required: true
+  description:
+    description: 'Descripción del artefacto'
+    required: true
+  path:
+    description: 'Ubicación del artefacto'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - run: |
+        cd ${{ inputs.work_dir }}
+        az artifacts universal publish --organization ${{ inputs.organization }} --project='${{ inputs.project }}' --scope project --feed ${{ inputs.feed }} --name ${{ inputs.name }} --version ${{ inputs.version }} --description '${{ inputs.description }}' --path ${{ inputs.path }}
+      shell: bash
