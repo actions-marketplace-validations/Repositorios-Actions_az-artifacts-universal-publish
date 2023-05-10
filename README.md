@@ -41,7 +41,7 @@ Se debe indicar el valores que corresponden. Nota: se puedes colocar los valores
 Ejemplo 2:
 
 <p align="center">
-  <img width="654" height="272" alt="action_with_variables" src="public/img/action_with_variables.PNG">
+  <img width="1046" height="272" alt="action_with_variables" src="public/img/action_with_variables.PNG">
 </p>
 
 ## Ejecución por consola
