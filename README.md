@@ -1,6 +1,6 @@
 # Az artifact universal publish
 
-Publica tus artefactos universales en los repositorios de artefacto de Azure DevOps.
+Publica tus artefactos universales en los repositorios de artefacto de Azure DevOps
 
 ## ¿Que es az artifact universal publish?
 
