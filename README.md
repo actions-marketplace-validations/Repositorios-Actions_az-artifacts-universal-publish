@@ -46,5 +46,5 @@ Ejemplo 2:
 
 ## Ejecución por consola
 
-1. mkdir -p work_dir/artifact_name
-2. cd work_dir && ls -l
+1. cd ${{ inputs.work_dir }}
+2. az artifacts universal publish --organization ${{ inputs.organization }} --project='${{ inputs.project }}' --scope project --feed ${{ inputs.feed }} --name ${{ inputs.name }} --version ${{ inputs.version }} --description '${{ inputs.description }}' --path ${{ inputs.path }}
